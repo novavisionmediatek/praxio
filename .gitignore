@@ -1,0 +1,17 @@
+# Local configuration and install state (never commit real credentials)
+/config/config.php
+/config/installed.lock
+
+# User uploads: CVs (personal data) and site images stay out of git; keep the folders and their .htaccess
+/uploads/*
+!/uploads/.htaccess
+/media/*
+!/media/.htaccess
+
+# Local tooling
+/.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,10 @@
+Options -Indexes
+DirectoryIndex index.php
+
+# Old static URLs -> PHP pages
+RewriteEngine On
+RewriteRule ^(index|product|about|case-studies|faq|careers|contact)\.html$ $1.php [R=301,L]
+
+<FilesMatch "^(setup\.php\.lock|installed\.lock)$">
+  Require all denied
+</FilesMatch>
